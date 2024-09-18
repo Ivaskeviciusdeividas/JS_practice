@@ -60,3 +60,4 @@ button.onclick = addRow;
 
 //populateTable(3);
 
+console.log("UPDATED!!!!")
