@@ -4,25 +4,37 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Lentele</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <h1>Hello </h1>
-        <button id="b1">press me</button>
+
+        <form action="#" method="GET">
+
+            <label>Input Name to add:</label>
+            <input id="input" type="text">
+            <button id="b1">press me</button>
+        </form>
+
+        
+
         <table id="tabl1" class="table">
             <thead class="headas"> 
                 <tr>
                     <th>Task #</th>
                     <th>Name</th>
                     <th>Action</th>
+                    
                 </tr>
             </thead>
-            <tbody class="bodis"></tbody>
+            <tbody class="bodis" onclick="console.log('mygtukas')">
+                
+            </tbody>
         </table>
-        <script src="index.js"></script>
+       <script src="index.js"></script> 
     </body>
 
 </html>
