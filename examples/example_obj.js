@@ -12,7 +12,7 @@ class Cup {
     }
 
     set currentFill(currentFill) {
-        if(this.talpa < currentFill){
+        if (this.talpa < currentFill) {
             throw new Error("cup is overflowing")
         }
        this._currentFill = currentFill;
