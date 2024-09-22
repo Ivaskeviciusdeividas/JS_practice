@@ -11,12 +11,16 @@ const car = {
 
 // Using a for-in loop, console.log all of this object's property names:
 // Solution here:
-
+for(key in car){
+    console.log(key);
+}
 
 
 
 // Now, using for-in loop, print out property values:
 // Solution here:
-
+for(key in car){
+    console.log(car[key]); 
+}
 
 
