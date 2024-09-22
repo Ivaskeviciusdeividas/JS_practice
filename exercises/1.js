@@ -13,9 +13,11 @@ const car = {
     color: "blue",
 };
 
+
 for( const [key, value] of Object.entries(car)){
     console.log(`${key} : ${value}`);
 }
+
 // 1.2. Once you have your object, assign other values:
 // country (string), maxSpeed (integer), numberOfSeats (integer)
 // After assigning, print out the whole object
@@ -38,9 +40,6 @@ console.log("1.3:")
 car.maxSpeed = 165;
 car.country = "China";
 
-for( const [key, value] of Object.entries(car)){
-    console.log(`${key} : ${value}`);
-}
 // 1.4. Create a property 'start' and assign a function start() to it 
 // Write that function separately. Inside it, print out that the car has started
 
@@ -52,7 +51,6 @@ car.start = start;
 function start(){
     console.log("car has started");
 }
-
 // Now, call the function from the object:
 car.start();
 
@@ -60,7 +58,6 @@ car.start();
 console.log("1.5")
 // Solution:
 delete car.numberOfSeats;
-
 
 // Print out the whole object:
 for( const [key, value] of Object.entries(car)){
