@@ -68,12 +68,3 @@ function getTypeAsString(shape) {
 console.log(getShapeDataObject(shapes));
 
 
-
-
-
-
-
-
-
-
-
