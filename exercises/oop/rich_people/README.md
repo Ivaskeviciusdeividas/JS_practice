@@ -36,12 +36,13 @@ Encapsulate all fields with getters and setters <br/>
     * Transfer 400 to another account
     * Add 3 expenses (costs 500, 400, 400)
     * Write a function to cover expenses
-    * console.log the person
+    * console.log the person's isBroke and totalBalance
     * One expense be left unpaid, isBroke should be true, totalBalance should reflect how much money the person has
     left after covering what he could
     * Receive salary: 2000
     * Transfer 1000 to the second account
     * Call the expense paying function again
-    * console.log the person. isBroke should be false, account information and totalBalance correct
+    * console.log the person's isBroke and totalBalance. isBroke should be false,
+    account information and totalBalance correct
 
 To be continued!
