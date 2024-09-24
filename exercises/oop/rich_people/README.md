@@ -1,30 +1,30 @@
 ## Rich people
 
 1. Create classes Person, BankAccount, Expense
-    a. The Person class should have fields (properties): name (string), receiveSalary
+    * The Person class should have fields (properties): name (string), receiveSalary
     (number), bankAccounts (list of BankAccounts) and expenses (list of Expenses),
     totalBalance (number) (balance across all bankAccounts),
     isBroke (boolean) (true if total expense cost is more than total balance)
 
-    b. The BankAccount class should have fields name (string), balance (number), 
+    * The BankAccount class should have fields name (string), balance (number), 
     isMain (boolean)
 
-    c. The Expense class should have fields name (string), cost (number), paidAt (date)
+    * The Expense class should have fields name (string), cost (number), paidAt (date)
     (if the expense hasn't been paid yet, this field should be left null or undefined)
 <br/>
 Encapsulate all fields with getters and setters <br/>
 
 2. Create methods for classes:
-    a. Person:
+    * Person:
         * receiveSalary(salaryAmount) - should get salary into his main account,
         * addAccount(account) - adds another bank account to this person. Cannot have more than 1 main account,
         each bank account's name must be unique for this person
         * transferFunds(accountName) - transfer available funds from one account to another
         * addExpense(name, cost) - creates and adds the expense to this person
-    b. BankAccount:
+    * BankAccount:
         * addFunds(amount)
         * subtractFunds(amount) - cannot subtract more than is in balance for this account
-    c. Expense:
+    * Expense:
         * cover(accountName) - pays the expense from funds of a specified account (if funds available)
         and updates the paidAt field
 
