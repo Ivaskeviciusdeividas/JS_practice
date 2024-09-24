@@ -35,14 +35,23 @@ Encapsulate all fields with getters and setters <br/>
     * Receive salary: 1000
     * Transfer 400 to another account
     * Add 3 expenses (costs 500, 400, 400)
-    * Write a function to cover expenses
-    * console.log the person's isBroke and totalBalance
-    * One expense be left unpaid, isBroke should be true, totalBalance should reflect how much money the person has
-    left after covering what he could
+    * console.log the person's isBroke, totalBalance and totalExpenses: isBroke should be true, totalBalance should be correct,
+   totalExpenses should be higher than totalBalance
+  
+6. Extra:
+    * Write a function to pay expenses using money from all accounts. Expense is coverable only fully - no partial coverage.
+    * Call this function and console.log the person's totalBalance, totalExpenses and isBroke.
     * Receive salary: 2000
     * Transfer 1000 to the second account
-    * Call the expense paying function again
-    * console.log the person's isBroke and totalBalance. isBroke should be false,
+    * Call the expense paying function
+    * console.log the person's isBroke, totalExpenses and totalBalance. isBroke should be false,
     account information and totalBalance correct
+
+### Hints
+1. You can write more getters to do what you want to do: if there is no totalExpenses field, you can write a
+getter totalExpenses() and calculate them there.
+2. You can write helper methods, such as getBankAccountByName(name) or getExpenseByName(name) in your Person class.
+3. For expense paying function, you can write a helper method in the Person class, or a function in the main.js; up to you.
+   Use loops.
 
 To be continued!
