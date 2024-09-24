@@ -23,7 +23,7 @@ Encapsulate all fields with getters and setters <br/>
         * transferFunds(accountFromName, accountToName, amout) - transfers amount of funds from one account to another
         * addExpense(name, cost) - creates and adds the expense to this person
         * coverExpense(expenseName, accountName) - pays the expense from funds of a specified account (if funds available)
-        and updates the paidAt field
+        and updates the paidAt field. Expense can be covered only fully - no partial coverage.
     * BankAccount:
         * addFunds(amount)
         * subtractFunds(amount) - cannot subtract more than is in balance for this account
