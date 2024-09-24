@@ -39,7 +39,7 @@ function listOfObj(objList) {
         objInside.perimeter = shape.calculatePerimeter();
         objInside.area = shape.calculateArea();
 
-        obj[key]=objInside;
+        obj[key] = objInside;
 
         shapeObj.push(obj);
     }
