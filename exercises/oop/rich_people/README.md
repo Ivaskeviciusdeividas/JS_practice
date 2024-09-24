@@ -53,5 +53,14 @@ getter totalExpenses() and calculate them there.
 2. You can write helper methods, such as getBankAccountByName(name) or getExpenseByName(name) in your Person class.
 3. For expense paying function, you can write a helper method in the Person class, or a function in the main.js; up to you.
    Use loops.
+4. You don't have to pass every field you want to have into you constructors arguments. You can pass just a single argument - name, for
+   example, then, map other fields inside the constructor. So, you can create a new Person(name), and the constructor can have
+   ```
+   constructor(name) {
+      this._name = name;
+      this._someKindOfList = [];
+      this._otherList = [];
+   ```
+   Access and manipulate these fields through getters - populate lists later, etc.
 
 To be continued!
