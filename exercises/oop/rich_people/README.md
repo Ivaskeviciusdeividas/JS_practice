@@ -1,10 +1,11 @@
 ## Rich people
 
 1. Create classes Person, BankAccount, Expense
-    * The Person class should have fields (properties): name (string), receiveSalary
-    (number), bankAccounts (list of BankAccounts) and expenses (list of Expenses),
+    * The Person class should have fields (properties): name (string),
+    bankAccounts (list of BankAccounts) and expenses (list of Expenses),
     totalBalance (number) (balance across all bankAccounts),
-    isBroke (boolean) (true if total expense cost is more than total balance)
+    isBroke (boolean) (true if total expense cost is more than total balance).
+    NOTE! totalBalance and isBroke don't have to be declared straight away, having these just as getters is good.
 
     * The BankAccount class should have fields name (string), balance (number), 
     isMain (boolean)
