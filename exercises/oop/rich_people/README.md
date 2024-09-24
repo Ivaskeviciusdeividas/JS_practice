@@ -30,7 +30,7 @@ Encapsulate all fields with getters and setters <br/>
 
 3. Create a main.js file and import your classes
 4. Create two Persons and save them to variables
-5. P1:
+5. Person1:
     * Add two accounts (1 of them main)
     * Receive salary: 1000
     * Transfer 400 to another account
