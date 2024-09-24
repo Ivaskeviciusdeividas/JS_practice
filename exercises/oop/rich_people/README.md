@@ -20,7 +20,7 @@ Encapsulate all fields with getters and setters <br/>
         * receiveSalary(salaryAmount) - should get salary into his main account,
         * addAccount(account) - adds another bank account to this person. Cannot have more than 1 main account,
         each bank account's name must be unique for this person
-        * transferFunds(accountName) - transfer available funds from one account to another
+        * transferFunds(accountName, amout) - transfers amount of funds from one account to another
         * addExpense(name, cost) - creates and adds the expense to this person
     * BankAccount:
         * addFunds(amount)
