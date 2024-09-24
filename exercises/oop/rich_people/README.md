@@ -22,12 +22,11 @@ Encapsulate all fields with getters and setters <br/>
         each bank account's name must be unique for this person
         * transferFunds(accountFromName, accountToName, amout) - transfers amount of funds from one account to another
         * addExpense(name, cost) - creates and adds the expense to this person
+        * coverExpense(expenseName, accountName) - pays the expense from funds of a specified account (if funds available)
+        and updates the paidAt field
     * BankAccount:
         * addFunds(amount)
         * subtractFunds(amount) - cannot subtract more than is in balance for this account
-    * Expense:
-        * cover(accountName) - pays the expense from funds of a specified account (if funds available)
-        and updates the paidAt field
 
 3. Create a main.js file and import your classes
 4. Create two Persons and save them to variables
