@@ -61,8 +61,22 @@ cannot be performed
 
 ---
 All of our customers try to buy their stuff. Some are more successful than others.
-The third customer cannot buy his water, so he waits for a couple hours and Minima announces a discount - 50% on drinks. The homeless guy from the future then tries again and is successful!
+The third customer cannot buy his water, so he waits for a couple hours and Minima
+announces a discount - 50% on drinks. The homeless guy from the future then
+tries again and is successful!
 
+#### Tips
+* You have the freedom to write as many helper methods as you want inside the
+Objects - treat this exercise in a problem solving manner.
+If you need a method - write it
+* Don't forget OOP principles: if a Shop or a Customer or a Wallet needs to
+do something - the doing should be done in these objects
+* Try to find a simple way, that does not require many outside dependencies, to read
+and parse the CSV file
+* Do the parsing, have a list of objects that you can work with first (read the file
+once and be done with it) and work with those parsed objects later
+* Throw Errors, guard your clauses early, to avoid unexpected behavior later
+---
 Have fun!
 
 
