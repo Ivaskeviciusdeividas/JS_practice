@@ -44,7 +44,7 @@ a credit card
 a Pizza, some Soap and some Face Cream
 5. The third customer only wants to buy 1 Bread and 1 Water Bottle
 
-Remember, we trvelled to the past, there weren't any Euros at that time in Lithuania, so we will have to find an Exchange to convert our money to Litas
+Remember, we travelled to the past, there weren't any Euros at that time in Lithuania, so we will have to find an Exchange to convert our money to Litas
 
 #### The Exchange
 1. Create a Bank object that does a simple thing: converts the currencies at a rate of
