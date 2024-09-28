@@ -1,0 +1,19 @@
+ID,Item,Price,Quantity,Shop,Category
+1,Bread,1.0,7,MINIMA,food
+2,Soap,0.5,10,MINIMA,hygiene
+3,Water Bottle,0.8,20,MINIMA,drinks
+4,Cereal,3.5,5,MEDIA,food
+5,Toothpaste,2.0,11,MEDIA,hygiene
+6,Juice,1.5,8,MEDIA,drinks
+7,Eggs,2.8,4,MEDIA,food
+8,Shampoo,4.0,7,MEDIA,hygiene
+9,Pizza,8.0,3,MAXIMA,food
+10,Face Cream,6.0,4,MAXIMA,hygiene
+11,Soda,2.5,11,MAXIMA,drinks
+12,Chips,3.0,14,MAXIMA,food
+13,Chocolate,1.8,2,MAXIMA,food
+14,Wine,10.0,2,MAXIMA,drinks
+15,Deodorant,5.5,5,MAXIMA,hygiene
+16,Shaving Cream,4.2,3,MAXIMA,hygiene
+17,Gourmet Cheese,12.0,1,MAXIMA,food
+18,Organic Tea,7.0,3,MAXIMA,drinks
