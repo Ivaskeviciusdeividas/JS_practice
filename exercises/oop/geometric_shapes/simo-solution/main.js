@@ -46,6 +46,7 @@ function getShapeDataObject(shapeList) {
         obj[key] = innerObj;
 
         ret.push(obj);
+        
     })
     return ret;
 }
