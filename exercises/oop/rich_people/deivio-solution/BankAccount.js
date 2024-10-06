@@ -31,15 +31,15 @@ class BankAccount {
     }
 
     addFunds(amount) {
-        this._balance += amount;
+        this.balance = this.balance + amount;
     }
 
     subtractFunds(amount) {
-        if(amount < this._balance) {
+        if(amount <= this._balance) {
             this._balance -= amount;
         }
         else {
-            throw Error("cannot subtract more than is in balance for this account");
+            throw new Error("cannot subtract more than is in balance for this account");
         }
     }
 }

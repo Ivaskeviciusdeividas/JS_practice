@@ -31,7 +31,7 @@ class Expense {
             this._paidAt = new Date();
         }
         else{
-        throw Error("not enough funds");
+        throw new Error("not enough funds");
         }
     }
 }

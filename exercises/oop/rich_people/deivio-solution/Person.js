@@ -1,5 +1,7 @@
-export default
-class Person {
+import Expense from "./Expense.js"
+
+
+export default class Person {
     constructor (name, bankAccounts, expenses) {
         this._name = name;
         this._bankAccounts = bankAccounts;
@@ -33,39 +35,97 @@ class Person {
     }
 
     get totalBalance() {
+        let sumBalance = 0;
+        this.bankAccounts.forEach(acc => {
+            sumBalance += acc.balance;
+        })
+        this._totalBalance = sumBalance;
         return this._totalBalance;
+    }
+    totalExpense() {
+        let sumExpense = 0;
+        this.expenses.forEach(exp => {
+            sumExpense += exp.cost;
+        })
+        return sumExpense;
     }
 
     get isBroke() {
+
         return this._isBroke;
     }
 
     receiveSalary(salaryAmount) {
-        for(acc in this._bankAccounts){
-            if(acc.isMain === 1){
-                acc._balance += acc.addFunds(salaryAmount);
+        for(let acc of this.bankAccounts){
+            if(acc.isMain){
+                acc.addFunds(salaryAmount);
+                
             }
         }
     }
 
-    addAccount(account) {
-        const newAccount = new BankAccount(account._name, account._balance, account._isMain);
-        for(acc of this.bankAccounts){
-            if(acc._name !== newAccount && newAccount._isMain!==1){
-                this.bankAccounts._isMain = 1;
-                this.bankAccounts.push(newAccount);
-
-            }
+    addAccount(account) { 
+        if( !account.isMain && this.bankAccounts.length === 0){ 
+            account.isMain = true;
         }
+        for(let acc of this.bankAccounts) {
+            if(acc.name === account.name) { 
+                
+                throw new Error("Bad account name")
+             }
+            if(acc.isMain && account.isMain) {
+                throw new Error("Main account already exists");
+            }        
+        }
+        this.bankAccounts.push(account);
     }
 
-    transferFunds(accountGetName,accountName) {
-        this.bankAccounts.accountGetName._balance += this.bankAccounts.accountName._balance;
-        this.bankAccounts.accountName._balance = 0;
+    transferFunds(accountGetName,accountName,amount) {
+        const acc1 = this.getBankAccountByName(accountGetName);
+        const acc2 = this.getBankAccountByName(accountName);
+        acc2.subtractFunds(amount);
+        acc1.addFunds(amount);
+    }
+
+    getBankAccountByName(name) {
+        for(let acc of this.bankAccounts) {
+            if(acc.name === name) {
+                return acc;
+            }  
+        }
+        throw new Error("no matching name account found");
+    }
+
+    getExpenseByName(name) {
+        for(let exp of this.expenses) {
+            if(exp.name === name) {
+                return exp;
+            }  
+        }
+        throw new Error("no matching name expense found");
     }
 
     addExpense(name, cost) {
         const expense = new Expense(name, cost);
         this.expenses.push(expense);
+    }
+
+    coverExpense(expenseName, accountName) {
+        //console.log(this.getBankAccountByName(accountName).balance);
+        const selectExp = this.getExpenseByName(expenseName);
+        const selectAcc = this.getBankAccountByName(accountName);
+        if(selectExp.cost <= selectAcc.balance) {
+            selectAcc.balance -= selectExp.cost;
+            selectExp._paidAt = true;
+            
+        }
+        else throw new Error("insufficient funds to pay");
+    }
+    payExpenses(){
+        if(this.totalBalance > this.totalExpense()){
+            for(let exp of this.expenses)
+                
+
+        }
     }
 }
