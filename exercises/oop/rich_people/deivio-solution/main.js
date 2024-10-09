@@ -12,8 +12,13 @@ person1.transferFunds("2", "1", 400);
 person1.addExpense("house", 500);
 person1.addExpense("dog", 400);
 person1.addExpense("wife", 400);
-person1.coverExpense("dog", "1");
+
+
 
 console.log(person1);
 console.log(person1.totalBalance);
 console.log(person1.totalExpense());
+person1.payExpenses();
+console.log(person1);
+
+console.log(person1.totalBalance);

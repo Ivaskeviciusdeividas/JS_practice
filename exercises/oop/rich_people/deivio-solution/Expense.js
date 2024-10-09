@@ -25,13 +25,8 @@ class Expense {
     get paidAt() {
         return this._paidAt;
     }
-
-    cover(accountName){
-        if(accountName.funds > this._cost) {
-            this._paidAt = new Date();
-        }
-        else{
-        throw new Error("not enough funds");
-        }
+    set paidAt(paidAt) {
+        this._paidAt = paidAt;
     }
+
 }

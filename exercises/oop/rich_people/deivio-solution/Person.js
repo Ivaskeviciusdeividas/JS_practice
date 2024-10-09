@@ -6,7 +6,6 @@ export default class Person {
         this._name = name;
         this._bankAccounts = bankAccounts;
         this._expenses = expenses;
-        this._totalBalance;
         this._isBroke;
     }
 
@@ -34,14 +33,15 @@ export default class Person {
         this._expenses = expenses;
     }
 
+
     get totalBalance() {
         let sumBalance = 0;
         this.bankAccounts.forEach(acc => {
             sumBalance += acc.balance;
         })
-        this._totalBalance = sumBalance;
-        return this._totalBalance;
+        return sumBalance;
     }
+
     totalExpense() {
         let sumExpense = 0;
         this.expenses.forEach(exp => {
@@ -115,17 +115,21 @@ export default class Person {
         const selectExp = this.getExpenseByName(expenseName);
         const selectAcc = this.getBankAccountByName(accountName);
         if(selectExp.cost <= selectAcc.balance) {
-            selectAcc.balance -= selectExp.cost;
-            selectExp._paidAt = true;
-            
+            selectAcc.subtractFunds(selectExp.cost);
+            selectExp.paidAt = new Date(); 
+            console.log(`expense: ${selectExp.name} paid succesfully, amount: ${selectExp.cost}`)  
         }
         else throw new Error("insufficient funds to pay");
     }
-    payExpenses(){
-        if(this.totalBalance > this.totalExpense()){
-            for(let exp of this.expenses)
-                
 
+    payExpenses(){
+        for( let exp of this.expenses){
+            for(let acc of this.bankAccounts) {
+                if(exp.cost <= acc.balance && !exp.paidAt){
+                    this.coverExpense(exp.name, acc.name);
+                }
+            }
         }
+        
     }
 }
